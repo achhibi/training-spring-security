@@ -20,10 +20,14 @@ public class User implements Serializable {
     @Column
     boolean enabled = true;
 
+    @Column
+    String fullName;
+
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     Collection<UserAuthority> userAuthorities = new ArrayList<>();
 
     User() {
+        this.id = UUID.randomUUID();
     }
 
     public User(User user) {
@@ -32,6 +36,7 @@ public class User implements Serializable {
         this.password = user.password;
         this.enabled = user.enabled;
         this.userAuthorities = user.userAuthorities;
+        this.fullName = user.fullName;
     }
 
     public User(String username, String password) {
@@ -79,6 +84,14 @@ public class User implements Serializable {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     @Override
