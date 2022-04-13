@@ -8,7 +8,7 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.jzheaux.springsecurity</groupId>
+	<groupId>amch.training.springsecurity</groupId>
 	<artifactId>resolutions</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>resolutions</name>
@@ -19,7 +19,7 @@
 		<spring-security.version>5.4.0-M1</spring-security.version>
 		<hibernate.version>5.4.13.Final</hibernate.version>
 
-		<start-class>io.jzheaux.springsecurity.resolutions.ResolutionsApplication</start-class>
+		<start-class>amch.training.springsecurity.resolutions.ResolutionsApplication</start-class>
 	</properties>
 
 	<dependencies>
@@ -106,11 +106,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>milestones</id>
-			<url>https://repo.spring.io/libs-milestone</url>
-		</repository>
-	</repositories>
 </project>

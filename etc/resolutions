@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set +x
-
-http :8080/resolutions "Authorization:Bearer $TOKEN"
-
-set -x
